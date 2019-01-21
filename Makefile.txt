@@ -1,0 +1,14 @@
+# This is a comment
+CC=gcc
+DEST=cp
+CFLAGS=-O
+LDFLAGS=
+OBJS=cp.o
+
+$(DEST):	$(OBJS)
+	$(CC) $(CFLAGS) -o $(DEST) $(OBJS) $(LDFLAGS)
+
+cp.o:	cp.c
+
+clean:
+	rm -f *.o $(DEST)
